@@ -3,34 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contra PC - Built for Battle | RS Computer Solutions</title>
+    <title>RS Computer Solutions - Complete IT Solutions in Ahmedabad</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #e63946; /* Red accent color for gaming feel */
-            --secondary: #1d3557;
-            --accent: #457b9d;
-            --light: #f1faee;
-            --dark: #1d3557;
-            --success: #2a9d8f;
-            --warning: #f4a261;
-            --danger: #e63946;
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
         }
         
         body {
-            font-family: 'Rajdhani', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
             margin: 0;
             padding: 0;
             color: var(--dark);
             line-height: 1.6;
         }
         
-        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
-        
-        /* Top Bar */
+        /* Header Styles */
         .top-bar {
-            background-color: #1d3557;
+            background-color: var(--dark);
             color: white;
             padding: 0.5rem 0;
             font-size: 0.9rem;
@@ -48,14 +46,13 @@
             color: white;
             text-decoration: none;
             margin-right: 1rem;
-            font-weight: 500;
         }
         
         .contact-info i {
             margin-right: 0.3rem;
         }
         
-        /* Main Header */
+        /* Navigation */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -74,71 +71,376 @@
         }
         
         .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo-img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .logo-main {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--danger);
-            font-family: 'Rajdhani', sans-serif;
-            line-height: 1;
+            color: var(--primary);
+            text-decoration: none;
         }
         
-        .logo-tagline {
-            font-size: 0.7rem;
-            color: var(--secondary);
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-top: 2px;
+        .logo span {
+            color: var(--dark);
         }
         
-        .logo-parent {
-            font-size: 0.6rem;
-            color: #666;
-            margin-top: 2px;
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1593640408182-31c228ca7b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 6rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            position: relative;
         }
         
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
         
         .hero p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
-            opacity: 0.9;
         }
         
-        /* Add all other CSS styles from previous version here */
-        /* ... [rest of your CSS remains the same] ... */
+        /* Category Navigation */
+        .category-nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
         
+        .category-container {
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--dark);
+            transition: all 0.2s;
+            border-radius: 6px;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        /* Product Card */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-container {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+        }
+        
+        .card-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .card-content {
+            padding: 1.25rem;
+        }
+        
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+            height: 3rem;
+            overflow: hidden;
+        }
+        
+        .card-specs {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            height: 4rem;
+            overflow: hidden;
+        }
+        
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .our-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--success);
+            margin-right: 1rem;
+        }
+        
+        .original-price {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            text-decoration: line-through;
+        }
+        
+        .savings {
+            background-color: #fffaf0;
+            color: #dd6b20;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        
+        .competitor {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        
+        .competitor:last-child {
+            border-bottom: none;
+            margin-bottom: 1rem;
+        }
+        
+        .competitor-name {
+            color: var(--secondary);
+        }
+        
+        .competitor-price {
+            font-weight: 600;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--danger);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 1rem 1.5rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .contact-info-footer {
+            margin-top: 1.5rem;
+        }
+        
+        .contact-info-footer p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .contact-info-footer i {
+            margin-right: 0.8rem;
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .top-bar-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info a {
+                margin: 0 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -147,7 +449,7 @@
         <div class="top-bar-container">
             <div class="contact-info">
                 <a href="tel:7041835916"><i class="fas fa-phone"></i> +91 7041835916</a>
-                <a href="mailto:sales@contrapc.com"><i class="fas fa-envelope"></i> sales@contrapc.com</a>
+                <a href="mailto:info@rscomputersolutions.com"><i class="fas fa-envelope"></i> info@rscomputersolutions.com</a>
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
@@ -160,21 +462,12 @@
     <!-- Main Header -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
-                <!-- You can add a logo image here -->
-                <!-- <img src="logo.png" alt="Contra PC Logo" class="logo-img"> -->
-                <div class="logo-text">
-                    <div class="logo-main">CONTRA PC</div>
-                    <div class="logo-tagline">BUILT FOR BATTLE</div>
-                    <div class="logo-parent">RS Computer Solutions</div>
-                </div>
-            </a>
+            <a href="#" class="logo">RS <span>Computer Solutions</span></a>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#products">Gaming PCs</a></li>
-                    <li><a href="#laptops">Laptops</a></li>
-                    <li><a href="#cctv">CCTV</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -183,32 +476,401 @@
     
     <!-- Hero Section -->
     <section class="hero">
-        <h1>EXTREME GAMING MACHINES</h1>
-        <p>High-performance PCs engineered for gamers who demand the best. Custom builds and pre-configured battle stations.</p>
-        <a href="#products" class="btn" style="width: auto; display: inline-block; padding: 0.8rem 2rem; background-color: var(--danger);">VIEW GAMING RIGS</a>
+        <h1>Your Complete IT Solutions Provider</h1>
+        <p>Premium quality computers, CCTV systems, printers and accessories at the most competitive prices in Ahmedabad</p>
+        <a href="#products" class="btn" style="width: auto; display: inline-block; padding: 0.8rem 2rem;">View Products</a>
     </section>
     
-    <!-- Rest of your HTML content remains the same -->
-    <!-- Just update any references from RS Computer Solutions to Contra PC where appropriate -->
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="category-container">
+            <button class="category-btn active" data-category="all">All Products</button>
+            <button class="category-btn" data-category="desktop">Desktop PCs</button>
+            <button class="category-btn" data-category="laptop">Laptops</button>
+            <button class="category-btn" data-category="cctv">CCTV Systems</button>
+            <button class="category-btn" data-category="printer">Printers</button>
+            <button class="category-btn" data-category="parts">Components</button>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h2 class="section-title" id="products">Featured Products</h2>
+        
+        <!-- Desktop PCs Section -->
+        <h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">Desktop Computers</h3>
+        <div class="grid">
+            <!-- PC 1 -->
+            <div class="card" data-category="desktop">
+                <div class="badge">Best Seller</div>
+                <div class="card-img-container">
+                    <img src="https://nclcomputer.com/image/cache/catalog/Prebuild%20PC/Under%2025K%20Gaming%20and%20Editing%20PC%20Build%20in%202025%20-%20NCL%20Computer-550x550.jpg" alt="Intel Core i5 12400 Build" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Intel Core i5 12400 Gaming PC</h3>
+                    <div class="card-specs">8GB DDR4 RAM • 256GB NVMe SSD • 450W SMPS • RGB Cabinet • Windows 11 Ready</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹23,990</div>
+                        <div class="original-price">₹24,990</div>
+                        <div class="savings">Save ₹1,000</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">NCL Computer:</span>
+                        <span class="competitor-price">₹24,990</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">PC Studio:</span>
+                        <span class="competitor-price">₹25,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">MD Computers:</span>
+                        <span class="competitor-price">₹25,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+            
+            <!-- PC 2 -->
+            <div class="card" data-category="desktop">
+                <div class="card-img-container">
+                    <img src="https://nclcomputer.com/image/cache/catalog/Prebuild%20PC/Under%2030K%20Gaming%20and%20Streaming%20PC%20Build%202025%20-%20NCL%20Computer-550x550.jpg" alt="AMD Ryzen 5 5600GT Build" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">AMD Ryzen 5 5600GT PC</h3>
+                    <div class="card-specs">16GB RAM • 500GB SSD • 500W SMPS • RGB Cabinet • WiFi Ready</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹28,490</div>
+                        <div class="original-price">₹29,990</div>
+                        <div class="savings">Save ₹1,500</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">NCL Computer:</span>
+                        <span class="competitor-price">₹29,990</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">PC Studio:</span>
+                        <span class="competitor-price">₹30,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">MD Computers:</span>
+                        <span class="competitor-price">₹30,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+            
+            <!-- PC 3 -->
+            <div class="card" data-category="desktop">
+                <div class="badge">Budget Pick</div>
+                <div class="card-img-container">
+                    <img src="https://nclcomputer.com/image/cache/catalog/Prebuild%20PC/Best%20PC%20Build%20For%20Coding%20,Programing%20and%20Trading%20-%20NCL%20Computer-550x550.jpg" alt="Intel Core i5 8th Gen Build" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Intel Core i5 8th Gen PC</h3>
+                    <div class="card-specs">8GB DDR4 RAM • 256GB NVMe SSD • 450W PSU • Basic Cabinet</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹18,990</div>
+                        <div class="original-price">₹19,980</div>
+                        <div class="savings">Save ₹990</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">NCL Computer:</span>
+                        <span class="competitor-price">₹19,980</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">PC Studio:</span>
+                        <span class="competitor-price">₹20,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">MD Computers:</span>
+                        <span class="competitor-price">₹20,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Laptops Section -->
+        <h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">Laptops</h3>
+        <div class="grid">
+            <!-- Laptop 1 -->
+            <div class="card" data-category="laptop">
+                <div class="badge">Trending</div>
+                <div class="card-img-container">
+                    <img src="https://m.media-amazon.com/images/I/61Dw5Z8LzJL._SL1500_.jpg" alt="HP 15s Laptop" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">HP 15s 12th Gen Core i3</h3>
+                    <div class="card-specs">12th Gen i3-1215U • 8GB DDR4 • 512GB SSD • 15.6" FHD • Win 11 • MS Office</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹34,990</div>
+                        <div class="original-price">₹38,990</div>
+                        <div class="savings">Save ₹4,000</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">Amazon:</span>
+                        <span class="competitor-price">₹38,990</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Flipkart:</span>
+                        <span class="competitor-price">₹39,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Vijay Sales:</span>
+                        <span class="competitor-price">₹39,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+            
+            <!-- Laptop 2 -->
+            <div class="card" data-category="laptop">
+                <div class="card-img-container">
+                    <img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._SL1500_.jpg" alt="ASUS VivoBook 15" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ASUS VivoBook 15 Core i5</h3>
+                    <div class="card-specs">11th Gen i5-1135G7 • 16GB RAM • 512GB SSD • 15.6" FHD • Backlit KB</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹49,990</div>
+                        <div class="original-price">₹54,990</div>
+                        <div class="savings">Save ₹5,000</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">Amazon:</span>
+                        <span class="competitor-price">₹54,990</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Flipkart:</span>
+                        <span class="competitor-price">₹55,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Vijay Sales:</span>
+                        <span class="competitor-price">₹55,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+            
+            <!-- Laptop 3 -->
+            <div class="card" data-category="laptop">
+                <div class="badge">New Launch</div>
+                <div class="card-img-container">
+                    <img src="https://m.media-amazon.com/images/I/71S4sIPFvBL._SL1500_.jpg" alt="Lenovo IdeaPad Gaming 3" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lenovo IdeaPad Gaming 3</h3>
+                    <div class="card-specs">Ryzen 5 6600H • 16GB RAM • 512GB SSD • RTX 3050 • 15.6" FHD 120Hz</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹69,990</div>
+                        <div class="original-price">₹74,990</div>
+                        <div class="savings">Save ₹5,000</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">Amazon:</span>
+                        <span class="competitor-price">₹74,990</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Flipkart:</span>
+                        <span class="competitor-price">₹75,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Vijay Sales:</span>
+                        <span class="competitor-price">₹75,200</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CCTV Section -->
+        <h3 class="section-title" style="font-size: 1.5rem; margin-top: 3rem;">CCTV Systems</h3>
+        <div class="grid">
+            <!-- CCTV 1 -->
+            <div class="card" data-category="cctv">
+                <div class="card-img-container">
+                    <img src="https://m.media-amazon.com/images/I/61iQ+5Y3mTL._SL1500_.jpg" alt="Hikvision CCTV Kit" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Hikvision 4CH 5MP CCTV Kit</h3>
+                    <div class="card-specs">4 Camera Kit • 5MP Resolution • 1TB HDD • 60m Night Vision • Weatherproof</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹15,990</div>
+                        <div class="original-price">₹18,500</div>
+                        <div class="savings">Save ₹2,510</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">Amazon:</span>
+                        <span class="competitor-price">₹18,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Flipkart:</span>
+                        <span class="competitor-price">₹19,200</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Local Market:</span>
+                        <span class="competitor-price">₹17,800</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+            
+            <!-- CCTV 2 -->
+            <div class="card" data-category="cctv">
+                <div class="badge">Popular</div>
+                <div class="card-img-container">
+                    <img src="https://m.media-amazon.com/images/I/61Y2T9+9VGL._SL1500_.jpg" alt="CP Plus CCTV Kit" class="card-img">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">CP Plus 8CH 4K CCTV Kit</h3>
+                    <div class="card-specs">8 Camera Kit • 4K Resolution • 2TB HDD • 100m Night Vision • Smart AI</div>
+                    
+                    <div class="price-container">
+                        <div class="our-price">₹32,990</div>
+                        <div class="original-price">₹38,500</div>
+                        <div class="savings">Save ₹5,510</div>
+                    </div>
+                    
+                    <div class="competitor">
+                        <span class="competitor-name">Amazon:</span>
+                        <span class="competitor-price">₹38,500</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Flipkart:</span>
+                        <span class="competitor-price">₹39,200</span>
+                    </div>
+                    <div class="competitor">
+                        <span class="competitor-name">Local Market:</span>
+                        <span class="competitor-price">₹36,800</span>
+                    </div>
+                    
+                    <button class="btn">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Section -->
+    <section id="about" style="background-color: white; padding: 4rem 1rem; margin-top: 3rem;">
+        <div class="container">
+            <h2 class="section-title">About RS Computer Solutions</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                <div>
+                    <p style="margin-bottom: 1rem; font-size: 1.1rem;">Welcome to RS Computer Solutions, your trusted IT solutions provider in Ahmedabad since 2010. Located opposite Devi Multiplex in Naroda, we specialize in providing high-quality computer systems, CCTV solutions, printers, and accessories at the most competitive prices.</p>
+                    <p style="margin-bottom: 1rem; font-size: 1.1rem;">Our team of experienced professionals is dedicated to helping you find the perfect technology solutions for your home or business needs. We pride ourselves on offering genuine products with manufacturer warranties and excellent after-sales support.</p>
+                    <p style="font-size: 1.1rem;">Visit our store today or call us at <strong>+91 7041835916</strong> to discuss your requirements.</p>
+                </div>
+                <div style="background-color: #f1f5f9; padding: 1.5rem; border-radius: 8px;">
+                    <h3 style="margin-top: 0; color: var(--primary);">Why Choose Us?</h3>
+                    <ul style="padding-left: 1.2rem;">
+                        <li style="margin-bottom: 0.8rem;">12+ years of trusted service in Ahmedabad</li>
+                        <li style="margin-bottom: 0.8rem;">Genuine products with manufacturer warranties</li>
+                        <li style="margin-bottom: 0.8rem;">Competitive prices with regular discounts</li>
+                        <li style="margin-bottom: 0.8rem;">Expert advice and after-sales support</li>
+                        <li style="margin-bottom: 0.8rem;">Convenient location in Naroda</li>
+                        <li>Free technical support for all purchases</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--primary); color: white; padding: 4rem 1rem;">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contact Us</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div>
+                    <h3 style="margin-top: 0;">Visit Our Store</h3>
+                    <address style="font-style: normal; margin-bottom: 2rem;">
+                        <p><i class="fas fa-map-marker-alt" style="margin-right: 0.8rem;"></i> RS COMPUTER SOLUTIONS<br>
+                        OPP DEVI MULTIPLEX<br>
+                        NARODA, AHMEDABAD - 382330</p>
+                    </address>
+                    
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone" style="margin-right: 0.8rem;"></i> <a href="tel:7041835916" style="color: white;">+91 7041835916</a></p>
+                    <p><i class="fas fa-envelope" style="margin-right: 0.8rem;"></i> <a href="mailto:info@rscomputersolutions.com" style="color: white;">info@rscomputersolutions.com</a></p>
+                    
+                    <h3 style="margin-top: 2rem;">Business Hours</h3>
+                    <p>Monday - Saturday: 10:00 AM - 8:00 PM<br>
+                    Sunday: 11:00 AM - 5:00 PM</p>
+                </div>
+                
+                <div style="background-color: white; padding: 2rem; border-radius: 8px;">
+                    <h3 style="color: var(--dark); margin-top: 0;">Send Us a Message</h3>
+                    <form>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Your Name</label>
+                            <input type="text" id="name" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Email Address</label>
+                            <input type="email" id="email" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <label for="phone" style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Phone Number</label>
+                            <input type="tel" id="phone" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--dark);">Your Message</label>
+                            <textarea id="message" rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: auto; padding: 0.8rem 2rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Contra PC</h3>
-                <p>High-performance gaming systems built for battle. A division of RS Computer Solutions.</p>
+                <h3>RS Computer Solutions</h3>
+                <p>Your trusted partner for all IT solutions in Ahmedabad. We provide quality products at competitive prices with excellent after-sales support.</p>
                 <div class="contact-info-footer">
                     <p><i class="fas fa-map-marker-alt"></i> OPP DEVI MULTIPLEX, NARODA, AHMEDABAD - 382330</p>
                     <p><i class="fas fa-phone"></i> +91 7041835916</p>
-                    <p><i class="fas fa-envelope"></i> sales@contrapc.com</p>
+                    <p><i class="fas fa-envelope"></i> info@rscomputersolutions.com</p>
                 </div>
             </div>
             
-            <!-- ... rest of footer content ... -->
-        </div>
-        <div class="copyright">
-            &copy; 2023 Contra PC (A Division of RS Computer Solutions). All rights reserved.
-        </div>
-    </footer>
-</body>
-</html>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Product Categories</h3>
+                <ul>
+                    <li><a href="#" data-category="desktop">Desktop Computers</a></li>
+                    <li><a href="#" data
